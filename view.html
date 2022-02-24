@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-image:url('{% static 'images/TWhoQi.jpg'%}' ); background-size:cover ;">
+
+<h1>READING BOOK </h1>
+{% for b1 in b %}
+    <tr>
+        <td>{{b1.book_name}}</td>
+    </tr>
+{% endfor %}
+</body>
+</html>

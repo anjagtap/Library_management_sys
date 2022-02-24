@@ -1,0 +1,47 @@
+<!--{% extends 'base.html' %}-->
+<!--{% block content %}-->
+<center>
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+</head>
+<body style="background-image:url('{% static 'images/TWhoQi.jpg'%}' ); background-size:cover ;">
+<div class="col-sm-7 offset-1" >
+    <h1 class="text-center alert alert-info">Following books are available in Library:</h1>
+    {% if book %}
+    <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Book_name</th>
+      <th scope="col">Author_Name</th>
+      <th scope="col">Price</th>
+        <th scope="col">Select</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for b in book %}
+    <tr>
+      <td><b>{{b.book_name}}</b></td>
+        <td><b>{{b.author_name}}</b></td>
+        <td><b>{{b.price}}</b></td>
+        <td><a href="{% url 'view' %}">CLICK TO VIEW</a></td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
+
+    {% else %}
+    <h4 class="text-center alert alert-warning">No data </h4>
+    {% endif %}
+</div>
+<br><a href="{% url 'home' %}">BACK</a>
+</body>
+</html>
+
+ </center>
+<!--{% endblock content %}-->

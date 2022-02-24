@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login </title>
+</head>
+<body style="background-image:url('{% static 'images/book1.jpg'%}' ); background-size:cover ;">
+<form action=""method="post">
+    {% csrf_token %}
+   {% for fm in form %}
+    {{ fm.label_tag }} {{ fm }} {{fm.errors|striptags}}<br><br>
+    {% endfor %}
+<!--    <input type="submit" value="Login">-->
+    <a href="{% url 'add' %}" class="btn btn-danger">LOGIN</a>
+</form>
+</body>
+</html>

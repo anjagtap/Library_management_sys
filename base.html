@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Operations</title>
+    <link rel="stylesheet" href="{% static 'stylesheets/bootstrap.min.css' %}">
+</head>
+<body style="background-image:url('{% static 'images/book1.jpg'%}' ); background-size:cover ;">
+
+<center>
+    <h1>WELCOME</h1>
+ <div class="container mt-5">
+     <h3 class="text-center alert alert-danger">BOOKS ARE OUR BEST FRIENDS!!!</h3>
+</center>
+     {% block content %}
+     {% endblock content %}
+
+ </div>
+
+<script src="{% static 'js/jqurey.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>

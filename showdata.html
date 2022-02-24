@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+</head>
+<body>
+
+<center>
+    {% if a %}
+<table border="2">
+    <thead>
+    <tr>
+<!--        <th>ID</th>-->
+<!--        <th>User Name</th>-->
+        <th>EMP Name</th>
+        <th>Mobile</th>
+        <th>Password</th>
+        <th>Date of Birth</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for e in a %}
+    <tr>
+<!--        <td>{{e.id}}</td>-->
+<!--        <td>{{e.uname}}</td>-->
+        <td>{{e.ename}}</td>
+        <td>{{e.email}}</td>
+        <td>{{e.password}}</td>
+        <td>{{e.dob}}</td>
+<!--        <td><a href="{% url 'updatedata' e.id %}">Update</a> </td>-->
+
+<!--        <td><a href="{% url 'deletedata' e.id %}" method="GET" onclick="return confirm('are you sure delete data')">Delete</a> </td>-->
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+    {% endif %}
+    <br><a href="{% url 'signup' %}">ADD</a>
+</center>
+</body>
+</html>
+     </center>
+{% endblock content %}

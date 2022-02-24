@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'stylesheets/index.css'%}">
+    <link rel="stylesheet" href="{% static 'stylesheets/bootstrap.min.css'%}">
+</head>
+<body style="background-image:url('{% static 'images/book1.jpg'%}' ); background-size:cover ;">
+<center>
+    <h2 style="color:red; font-size:500%;
+    text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
+             0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+             0 0 40px #A5F1FF;"> WELCOME TO LIBRARY MANAGEMENT SYSTEM</h2>
+    <br>
+    <h3>!!! Nothing is Pleasanter than a Library !!!</h3>
+</center>
+
+<div style="display:block; width:100%;">
+    <div style="width:50%; float: left; display: inline-block;">
+        <center>
+            <img src="{% static 'images/admin.jpg'%}" width="300" height="300" style="padding:20px">
+            <br>
+            <button class="btn btn-dark btn-lg btn-block" type="button">
+                <a href="signup.html"><h3 style="color:red">I am Admin </h3></a>
+            </button>
+        </center>
+    </div>
+    <div style="width:50%; float: left; display: inline-block;">
+        <center>
+            <img src="{% static 'images/stud.jpg'%}" width="300" height="300" style="padding:20px">
+            <br>
+            <button class="btn btn-dark btn-lg btn-block" type="button">
+                <a href="books.html"><h3 style="color:red">I am Student</h3></a>
+            </button>
+        </center>
+
+    </div>
+</div>
+<br>
+
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<script src="{% static 'js/jquery.js'%}"></script>
+<script src="{% static 'js/popper.js'%}"></script>
+</body>
+</html>
